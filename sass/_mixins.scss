@@ -30,3 +30,9 @@
 @mixin icon-variant($color) {
     color: $color;
 }
+
+@mixin panel-variant($color) {
+  & > .panel-heading {
+    background-color: $color;
+  }
+}

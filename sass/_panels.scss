@@ -1,0 +1,43 @@
+.panel {
+  border-radius: 2px;
+  border: 0;
+
+  &.panel-default {
+    @include panel-variant($btn-default);
+  }
+  &.panel-primary {
+    @include panel-variant($primary);
+  }
+  // Success appears as green
+  &.panel-success {
+    @include panel-variant($success);
+  }
+  // Info appears as blue-green
+  &.panel-info {
+    @include panel-variant($info);
+  }
+  // Warning appears as orange
+  &.panel-warning {
+    @include panel-variant($warning);
+  }
+  // Danger and error appear as red
+  &.panel-danger {
+    @include panel-variant($danger);
+  }
+  
+  @extend .shadow-z-1;
+}
+
+
+[class*="panel-"] > .panel-heading {
+  color: $darkbg-text;
+  border: 0;
+}
+.panel-default, .panel:not([class*="panel-"]) {
+  > .panel-heading {
+    color: $lightbg-text;
+  }
+}
+.panel-footer {
+  background-color: $grey-200;
+}
